@@ -1,10 +1,10 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import Link from 'next/link'
-import { editions } from '@/lib/editions'
-import { Reveal } from '@/components/reveal'
+//import { motion } from 'framer-motion'
+//import Image from 'next/image'
+//import Link from 'next/link'
+//import { editions } from '@/lib/editions'
+//import { Reveal } from '@/components/reveal'
 
 export function LatestEditions() {
   return (
