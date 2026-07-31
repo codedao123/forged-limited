@@ -42,7 +42,7 @@ export function HeroSearch() {
         transition={{ duration: 1.1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
         className="mt-6 text-lg font-light tracking-wide text-muted-foreground sm:text-xl"
       >
-        Every Car. Every Story.
+        Coming soon! Note that AI image is being used for testing.
       </motion.p>
 
       <motion.form
