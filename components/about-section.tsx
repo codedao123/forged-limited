@@ -12,7 +12,7 @@ export function AboutSection() {
         <Reveal delay={0.1}>
           <p className="mt-10 text-balance text-2xl font-light leading-relaxed tracking-tight sm:text-3xl md:text-4xl md:leading-[1.4]">
             FORGED.LIMITED is an automotive archive preserving builds, stories
-            and culture through photography and collectible editions.
+            and culture through photography and collectible member cards.
           </p>
         </Reveal>
       </div>

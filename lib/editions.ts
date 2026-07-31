@@ -14,11 +14,11 @@ export type Edition = {
 export const editions: Edition[] = [
   {
     number: '0001',
-    vehicle: 'Porsche 911 Carrera RS 2.7',
-    ownerInstagram: '@aircooled.era',
+    vehicle: 'forged',
+    ownerInstagram: '@forged.limited',
     featuredDate: 'January 2026',
-    location: 'Stuttgart, Germany',
-    year: '1973',
+    location: 'Adelaide, Australia',
+    year: '5000',
     power: '210 hp — 2.7L flat-six',
     modifications: [
       'Ducktail spoiler rebuilt from original tooling',

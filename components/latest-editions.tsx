@@ -12,7 +12,7 @@ export function LatestEditions() {
       <Reveal>
         <div className="flex items-end justify-between border-b border-border pb-6">
           <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">
-            Collection
+            Archive
           </h2>
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground">
             {editions.length} Archived
