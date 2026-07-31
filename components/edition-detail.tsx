@@ -1,10 +1,10 @@
 'use client'
 
-//import { motion } from 'framer-motion'
-//import Image from 'next/image'
-//import Link from 'next/link'
-//import { ArrowLeft } from 'lucide-react'
-//import type { Edition } from '@/lib/editions'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowLeft } from 'lucide-react'
+import type { Edition } from '@/lib/editions'
 
 const ease = [0.22, 1, 0.36, 1] as const
 
