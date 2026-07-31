@@ -9,7 +9,7 @@ const links = [
   { label: 'About', href: '/#about' },
   {
     label: 'Instagram',
-    href: 'https://www.instagram.com/forged.limited/',
+    href: 'https://instagram.com/forged.limited',
     external: true,
   },
 ]
