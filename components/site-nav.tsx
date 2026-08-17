@@ -6,7 +6,6 @@ import Link from 'next/link'
 const links = [
   { label: 'Archive', href: '/#editions' },
   { label: 'Events', href: '/#events' },
-  { label: 'Wallpapers', href: '/wallpapers' },
   { label: 'About', href: '/#about' },
   {
     label: 'Instagram',
