@@ -39,7 +39,8 @@ export const editions: Edition[] = [
     year: '2018',
     power: '138hp 1.4L K14C booster jet turbocharged inline-four ',
     modifications: [
-      'Greedy spoiler, CTC intercooler pipes ',
+      'Greedy spoiler',
+      'CTC intercooler pipes ',
       'CTC air intake pipes ',
       'Colt speed front air intake pipe',
       'Aftermarket drop in air filter',
