@@ -33,7 +33,7 @@ export const editions: Edition[] = [
   {
     number: '0002',
     vehicle: 'Suzuki Swift Sport Turbo ZC33S',
-    ownerInstagram: '@bb_turbo',
+    ownerInstagram: '@bby_turbo',
     featuredDate: 'August 2026',
     location: 'Castle Plaza',
     year: '2018',
