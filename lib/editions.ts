@@ -127,6 +127,21 @@ export const editions: Edition[] = [
     story:
       'Blauschwarz metallic, the wing that changed touring car design. A time-capsule example with original books, tools and the quiet confidence of a car that has nothing left to prove.',
   },
+  {
+    number: '0010',
+    vehicle: 'Mercedes-Benz W124 260E',
+    ownerInstagram: '@ayushdhxnda',
+    featuredDate: 'August 2026',
+    location: 'Goodyear Autocare, Adelaide',
+    year: '1989',
+    power: '160 hp — 2.6-litre M103.940 inline-six',
+    modifications: [
+      'Lorinser Wheels'
+    ],
+    gallery: ['/editions/0010.png', '/editions/0010-a.png', '/editions/0010-b.png'],
+    story:
+      'The 1989 Mercedes-Benz 260E (W124) elegantly bridges the gap between mechanical purity and modern comfort, hiding a velvety 2.6-litre inline-six engine behind its timeless, wind-cheating design.',
+  },
 ]
 
 export function getEdition(number: string): Edition | undefined {
