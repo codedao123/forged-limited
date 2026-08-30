@@ -75,42 +75,6 @@ export const editions: Edition[] = [
   },
   {
     number: '0004',
-    vehicle: 'Lancia Delta HF Integrale Evoluzione',
-    ownerInstagram: '@gruppo.a',
-    featuredDate: 'April 2026',
-    location: 'Turin, Italy',
-    year: '1992',
-    power: '210 hp — 2.0L turbo inline-four',
-    modifications: [
-      'Rosso Monza respray',
-      'Recaro seats retrimmed',
-      'Momo steering wheel refresh',
-      'Full corner-balanced suspension setup',
-    ],
-    gallery: ['/editions/0004.png', '/editions/0004-a.png', '/editions/0004-b.png'],
-    story:
-      'A homologation icon in Rosso Monza. Rally lineage worn openly, driven with the sound turned up. Photographed at dawn on the roads it was built to conquer.',
-  },
-  {
-    number: '0005',
-    vehicle: 'Honda NSX Type R',
-    ownerInstagram: '@na1.registry',
-    featuredDate: 'May 2026',
-    location: 'Tokyo, Japan',
-    year: '1992',
-    power: '276 hp — 3.0L VTEC V6',
-    modifications: [
-      'Factory weight-reduction package intact',
-      'Championship White respray',
-      'Red Recaro interior preserved',
-      'Titanium shift knob original to car',
-    ],
-    gallery: ['/editions/0005.png', '/editions/0005-a.png', '/editions/0005-b.png'],
-    story:
-      'Championship White, stripped and focused. The purest expression of the first-generation car — a machine defined by what was removed rather than what was added.',
-  },
-  {
-    number: '0006',
     vehicle: 'Lexus IS200/Altezza AS200',
     ownerInstagram: '@gex_da_lex',
     featuredDate: 'August 2026',
@@ -138,10 +102,29 @@ export const editions: Edition[] = [
       'Toyota OEM ETC toll reader',
       'Import Bible tilting licence plate brackets & Iwate prefecture seals',
     ],
-    gallery: ['/editions/0006.png', '/editions/0006-a.png', '/editions/0006-b.png'],
+    gallery: ['/editions/0004.png', '/editions/0004-a.png', '/editions/0004-b.png'],
     story:
       'Lexus IS200, known as the Toyota Altezza AS200 in Japan, is unique because it pairs a compact, rear-wheel-drive layout with a smooth 2.0-liter inline-six engine to deliver balanced handling in a small sedan.',
   },
+  {
+    number: '0005',
+    vehicle: 'Honda NSX Type R',
+    ownerInstagram: '@na1.registry',
+    featuredDate: 'May 2026',
+    location: 'Tokyo, Japan',
+    year: '1992',
+    power: '276 hp — 3.0L VTEC V6',
+    modifications: [
+      'Factory weight-reduction package intact',
+      'Championship White respray',
+      'Red Recaro interior preserved',
+      'Titanium shift knob original to car',
+    ],
+    gallery: ['/editions/0005.png', '/editions/0005-a.png', '/editions/0005-b.png'],
+    story:
+      'Championship White, stripped and focused. The purest expression of the first-generation car — a machine defined by what was removed rather than what was added.',
+  },
+  
   {
     number: '0010',
     vehicle: 'Mercedes-Benz W124 260E',
