@@ -14,21 +14,20 @@ export type Edition = {
 export const editions: Edition[] = [
   {
     number: '0001',
-    vehicle: 'forged',
-    ownerInstagram: '@forged.limited',
-    featuredDate: 'January 2026',
-    location: 'Adelaide, Australia',
-    year: '5000',
-    power: '210 hp — 2.7L flat-six',
+    vehicle: 'Subaru Impreza Hawkeye',
+    ownerInstagram: '@letty_thathyperdrive_girl',
+    featuredDate: 'August 2026',
+    location: 'Castle Plaza',
+    year: '2004',
+    power: '210-255hp EJ20 (2.0L Turbocharged Flat-Four) 5 Speed Manual AWD',
     modifications: [
-      'Ducktail spoiler rebuilt from original tooling',
-      'Numbers-matching engine rebuild',
-      'Fuchs wheels refinished to factory spec',
-      'Concours-grade repaint in Grand Prix White',
+      'Generally stock',
+      'About to start with interior modifications',
+      ' 3 > 3½ inch exhaust with highflow cat',
     ],
-    gallery: ['/editions/0001.png', '/editions/0001-a.png', '/editions/0001-b.png'],
+    gallery: ['/editions/0001.png', '/editions/0001-a.png', '/editions/0001-b.png', '/editions/0001-c.png', '/editions/0001-d.png'],
     story:
-      'A numbers-matching restoration carried out over four years. Every fastener returned to factory specification, the Ducktail rebuilt from original tooling. This is edition zero-zero-zero-one — where the archive begins.',
+      'This genuine Hawkeye Subaru Impreza pairs its legendary 5-speed manual transmission with a freshly rebuilt 2.0L EJ20 boxer engine, delivering a pure and reliable 210 hp through its iconic Symmetrical AWD system.    Shot by NMS Media',
   },
   {
     number: '0002',
