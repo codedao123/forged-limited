@@ -1,8 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+import { ArrowUpRight } from 'lucide-react'
 
 export function HeroSearch() {
   const router = useRouter()
@@ -72,6 +74,28 @@ export function HeroSearch() {
           Access Archive
         </button>
       </motion.form>
+
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        className="mt-6 grid w-full max-w-md grid-cols-2 gap-3"
+      >
+        <Link
+          href="/merch"
+          className="group inline-flex items-center justify-center gap-2 rounded-md bg-white px-4 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-black transition-transform hover:-translate-y-1"
+        >
+          Merch
+          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
+        </Link>
+        <Link
+          href="/event"
+          className="group inline-flex items-center justify-center gap-2 rounded-md border border-border bg-card/40 px-4 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-foreground backdrop-blur-md transition-colors hover:border-foreground/50"
+        >
+          Forged Car Meet
+          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
+        </Link>
+      </motion.div>
     </section>
   )
 }
