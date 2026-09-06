@@ -14,16 +14,24 @@ export function AttendanceCounter({
   const [count, setCount] = useState(0)
   const [hasPressed, setHasPressed] = useState(false)
   const [pending, setPending] = useState(false)
+  const [error, setError] = useState('')
 
   useEffect(() => {
     setHasPressed(window.localStorage.getItem(`${storageKey}-pressed`) === 'true')
 
     async function loadCount() {
-      const response = await fetch(`/api/interest?key=${encodeURIComponent(storageKey)}`)
-      if (!response.ok) return
+      try {
+        const response = await fetch(`/api/interest?key=${encodeURIComponent(storageKey)}`)
+        if (!response.ok) {
+          setError('Connect Redis in Vercel to enable shared counting.')
+          return
+        }
 
-      const data = (await response.json()) as { count: number }
-      setCount(data.count)
+        const data = (await response.json()) as { count: number }
+        setCount(data.count)
+      } catch {
+        setError('The shared counter is currently unavailable.')
+      }
     }
 
     void loadCount()
@@ -33,20 +41,29 @@ export function AttendanceCounter({
     if (hasPressed || pending) return
 
     setPending(true)
-    const response = await fetch('/api/interest', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ key: storageKey }),
-    })
+    setError('')
 
-    if (response.ok) {
+    try {
+      const response = await fetch('/api/interest', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ key: storageKey }),
+      })
+
+      if (!response.ok) {
+        setError('Connect Redis in Vercel to enable shared counting.')
+        return
+      }
+
       const data = (await response.json()) as { count: number }
       setCount(data.count)
       setHasPressed(true)
       window.localStorage.setItem(`${storageKey}-pressed`, 'true')
+    } catch {
+      setError('The shared counter is currently unavailable. Try again.')
+    } finally {
+      setPending(false)
     }
-
-    setPending(false)
   }
 
   return (
@@ -62,6 +79,11 @@ export function AttendanceCounter({
       <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
         If you press once, please do not press again.
       </p>
+      {error && (
+        <p className="max-w-xs font-mono text-[10px] uppercase tracking-[0.15em] text-red-400">
+          {error}
+        </p>
+      )}
     </div>
   )
 }

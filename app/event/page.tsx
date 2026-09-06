@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft, ArrowRight, CalendarDays, MapPin } from 'lucide-react'
+import { ArrowLeft, CalendarDays, MapPin } from 'lucide-react'
 import { AttendanceCounter } from '@/components/attendance-counter'
 import { Reveal } from '@/components/reveal'
 
@@ -70,13 +70,6 @@ export default function EventPage() {
             be there when Product 001 enters the archive.
           </p>
           <div className="mt-10 flex flex-col items-start gap-6 sm:flex-row sm:items-start">
-            <a
-              href="mailto:hello@forged.limited?subject=FORGED%20Car%20Meet"
-              className="inline-flex items-center gap-3 bg-primary px-7 py-4 font-mono text-xs uppercase tracking-[0.3em] text-primary-foreground transition-opacity hover:opacity-80"
-            >
-              Register interest
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </a>
             <AttendanceCounter />
           </div>
         </Reveal>
