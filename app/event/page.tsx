@@ -13,17 +13,6 @@ export default function EventPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <div className="mx-auto w-full max-w-6xl px-6 pb-28 pt-32 sm:pt-40">
-        <div className="-mx-6 mb-16 overflow-hidden border-y border-border py-3" aria-label="Launch announcements">
-          <div className="flex w-max animate-marquee gap-10 font-mono text-[10px] uppercase tracking-[0.35em] text-muted-foreground">
-            <span aria-hidden="true">
-              PRODUCT 001 LAUNCHING SOON · FORGED CAR MEET · EVENT LAUNCH SOON ·
-            </span>
-            <span aria-hidden="true">
-              PRODUCT 001 LAUNCHING SOON · FORGED CAR MEET · EVENT LAUNCH SOON ·
-            </span>
-          </div>
-        </div>
-
         <Reveal>
           <Link
             href="/"

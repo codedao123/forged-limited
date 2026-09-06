@@ -84,6 +84,17 @@ export function SiteNav() {
         </button>
       </nav>
 
+      <div className="overflow-hidden border-t border-border py-2" aria-label="Launch announcements">
+        <div className="flex w-max animate-marquee gap-10 font-mono text-[10px] uppercase tracking-[0.35em] text-muted-foreground">
+          <span aria-hidden="true">
+            PRODUCT 001 LAUNCHING SOON · FORGED CAR MEET · EVENT LAUNCH SOON ·
+          </span>
+          <span aria-hidden="true">
+            PRODUCT 001 LAUNCHING SOON · FORGED CAR MEET · EVENT LAUNCH SOON ·
+          </span>
+        </div>
+      </div>
+
       <div
         id="mobile-navigation"
         className={`border-t border-border bg-background/95 px-6 backdrop-blur-md transition-[max-height,opacity] duration-300 md:hidden ${
