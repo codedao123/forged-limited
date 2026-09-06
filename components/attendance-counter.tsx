@@ -13,21 +13,40 @@ export function AttendanceCounter({
 }: InterestCounterProps) {
   const [count, setCount] = useState(0)
   const [hasPressed, setHasPressed] = useState(false)
+  const [pending, setPending] = useState(false)
 
   useEffect(() => {
-    const savedCount = Number(window.localStorage.getItem(storageKey) ?? 0)
-    setCount(Number.isFinite(savedCount) ? savedCount : 0)
     setHasPressed(window.localStorage.getItem(`${storageKey}-pressed`) === 'true')
+
+    async function loadCount() {
+      const response = await fetch(`/api/interest?key=${encodeURIComponent(storageKey)}`)
+      if (!response.ok) return
+
+      const data = (await response.json()) as { count: number }
+      setCount(data.count)
+    }
+
+    void loadCount()
   }, [])
 
-  function handlePress() {
-    if (hasPressed) return
+  async function handlePress() {
+    if (hasPressed || pending) return
 
-    const nextCount = count + 1
-    setCount(nextCount)
-    setHasPressed(true)
-    window.localStorage.setItem(storageKey, String(nextCount))
-    window.localStorage.setItem(`${storageKey}-pressed`, 'true')
+    setPending(true)
+    const response = await fetch('/api/interest', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ key: storageKey }),
+    })
+
+    if (response.ok) {
+      const data = (await response.json()) as { count: number }
+      setCount(data.count)
+      setHasPressed(true)
+      window.localStorage.setItem(`${storageKey}-pressed`, 'true')
+    }
+
+    setPending(false)
   }
 
   return (
@@ -35,10 +54,10 @@ export function AttendanceCounter({
       <button
         type="button"
         onClick={handlePress}
-        disabled={hasPressed}
+        disabled={hasPressed || pending}
         className="border border-border px-7 py-4 font-mono text-xs uppercase tracking-[0.3em] text-foreground transition-colors hover:border-foreground disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {hasPressed ? 'Counted' : actionLabel} · {count}
+        {pending ? 'Saving' : hasPressed ? 'Counted' : actionLabel} · {count}
       </button>
       <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
         If you press once, please do not press again.
