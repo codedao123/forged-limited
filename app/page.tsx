@@ -5,7 +5,7 @@ import { SiteFooter } from '@/components/site-footer'
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="homepage-background min-h-screen text-foreground">
       <HeroSearch />
       <LatestEditions />
       <AboutSection />

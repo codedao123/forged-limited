@@ -83,11 +83,15 @@ export function HeroSearch() {
         className="mt-6 grid w-full max-w-md grid-cols-2 gap-3"
       >
         <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.35 }}>
-          <Link
-          href="/merch"
-          aria-label="Explore Forged JetTags merch"
-          className="group relative block aspect-[1.18] overflow-hidden rounded-md border border-white/20 bg-white text-left text-black shadow-2xl shadow-black/30"
+          <motion.div
+            animate={{ y: [0, -4, 0] }}
+            transition={{ duration: 3.5, repeat: Infinity, repeatDelay: 1.5, ease: 'easeInOut' }}
           >
+            <Link
+              href="/merch"
+              aria-label="Explore Forged JetTags merch"
+              className="group relative block aspect-[1.18] overflow-hidden rounded-md border border-white/20 bg-white text-left text-black shadow-2xl shadow-black/30"
+            >
             <Image
               src="/editions/product-001.png"
               alt=""
@@ -104,14 +108,19 @@ export function HeroSearch() {
               <p className="mt-2 text-sm font-medium tracking-tight">Forged JetTags</p>
               <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-white/70">Limited release</p>
             </div>
-          </Link>
+            </Link>
+          </motion.div>
         </motion.div>
         <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.35, delay: 0.03 }}>
-          <Link
-          href="/event"
-          aria-label="Join the Forged Car Meet"
-          className="group relative block aspect-[1.18] overflow-hidden rounded-md border border-white/20 bg-black text-left text-white shadow-2xl shadow-black/30"
+          <motion.div
+            animate={{ y: [0, -4, 0] }}
+            transition={{ duration: 3.5, repeat: Infinity, repeatDelay: 1.5, delay: 0.35, ease: 'easeInOut' }}
           >
+            <Link
+              href="/event"
+              aria-label="Join the Forged Car Meet"
+              className="group relative block aspect-[1.18] overflow-hidden rounded-md border border-white/20 bg-black text-left text-white shadow-2xl shadow-black/30"
+            >
             <Image
               src="/editions/0001.png"
               alt=""
@@ -128,7 +137,8 @@ export function HeroSearch() {
               <p className="mt-2 text-sm font-medium tracking-tight">Forged Car Meet</p>
               <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-white/70">Register your interest</p>
             </div>
-          </Link>
+            </Link>
+          </motion.div>
         </motion.div>
       </motion.div>
     </section>

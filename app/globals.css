@@ -176,3 +176,12 @@
 .animate-marquee {
   animation: marquee 22s linear infinite;
 }
+
+.homepage-background {
+  background-color: oklch(0.025 0.01 250);
+  background-image:
+    linear-gradient(oklch(1 0 0 / 2%) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 2%) 1px, transparent 1px),
+    radial-gradient(circle at 50% 0%, oklch(0.24 0.035 250 / 18%), transparent 42%);
+  background-size: 72px 72px, 72px 72px, 100% 100%;
+}

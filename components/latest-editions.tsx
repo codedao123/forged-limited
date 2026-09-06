@@ -7,6 +7,8 @@ import { editions } from '@/lib/editions'
 import { Reveal } from '@/components/reveal'
 
 export function LatestEditions() {
+  const pendingDetails = new Set(['0005', '0006', '0009', '0012'])
+
   return (
     <section id="editions" className="mx-auto w-full max-w-6xl px-6 py-28 sm:py-36">
       <Reveal>
@@ -27,16 +29,31 @@ export function LatestEditions() {
               <motion.article
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="overflow-hidden rounded-lg border border-border bg-card"
+                className="overflow-hidden rounded-lg border border-border bg-card/60 backdrop-blur-sm"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={`/editions/${edition.number}.png`}
-                    alt={edition.vehicle}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
+                  {edition.gallery.length > 0 ? (
+                    <Image
+                      src={`/editions/${edition.number}.png`}
+                      alt={edition.vehicle}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="flex h-full items-center justify-center bg-muted px-8 text-center">
+                      <p className="max-w-xs font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                        Waiting for response
+                      </p>
+                    </div>
+                  )}
+                  {pendingDetails.has(edition.number) && edition.gallery.length > 0 && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-background/65 px-8 text-center backdrop-blur-[2px]">
+                      <p className="max-w-xs font-mono text-xs uppercase tracking-[0.2em] text-foreground">
+                        Waiting for response
+                      </p>
+                    </div>
+                  )}
                   <span className="absolute left-4 top-4 rounded-full border border-border bg-background/50 px-3 py-1 font-mono text-[11px] tracking-[0.25em] text-foreground backdrop-blur-md">
                     №{edition.number}
                   </span>
