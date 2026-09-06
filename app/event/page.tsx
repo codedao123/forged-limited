@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, CalendarDays, MapPin } from 'lucide-react'
 import { AttendanceCounter } from '@/components/attendance-counter'
@@ -14,6 +13,17 @@ export default function EventPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <div className="mx-auto w-full max-w-6xl px-6 pb-28 pt-32 sm:pt-40">
+        <div className="-mx-6 mb-16 overflow-hidden border-y border-border py-3" aria-label="Launch announcements">
+          <div className="flex w-max animate-marquee gap-10 font-mono text-[10px] uppercase tracking-[0.35em] text-muted-foreground">
+            <span aria-hidden="true">
+              PRODUCT 001 LAUNCHING SOON · FORGED CAR MEET · EVENT LAUNCH SOON ·
+            </span>
+            <span aria-hidden="true">
+              PRODUCT 001 LAUNCHING SOON · FORGED CAR MEET · EVENT LAUNCH SOON ·
+            </span>
+          </div>
+        </div>
+
         <Reveal>
           <Link
             href="/"
@@ -38,25 +48,6 @@ export default function EventPage() {
             </p>
           </Reveal>
         </div>
-
-        <Reveal delay={0.2} className="relative mt-16 aspect-[16/8] overflow-hidden border border-border bg-card">
-          <Image
-            src="/editions/0006.png"
-            alt="Lamborghini Gallardo at the FORGED car meet"
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 1200px"
-            className="object-cover"
-          />
-          <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-black/75 px-5 py-4 sm:px-8 sm:py-6">
-            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-white sm:text-xs">
-              Cars / People / Culture
-            </span>
-            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-white sm:text-xs">
-              Adelaide
-            </span>
-          </div>
-        </Reveal>
 
         <Reveal delay={0.3} className="mt-16 border-y border-border">
           <div className="grid sm:grid-cols-2">
