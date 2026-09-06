@@ -65,7 +65,7 @@ export default function MerchPage() {
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
               <AttendanceCounter
-                storageKey="forged-jettags-interest-reset-2026-09-06"
+                storageKey="forged-jettags-interest-reset-2026-09-07"
                 actionLabel="I want one"
               />
             </div>

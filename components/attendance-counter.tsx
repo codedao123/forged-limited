@@ -8,7 +8,7 @@ type InterestCounterProps = {
 }
 
 export function AttendanceCounter({
-  storageKey = 'forged-car-meet-attendance-reset-2026-09-06',
+  storageKey = 'forged-car-meet-attendance-reset-2026-09-07',
   actionLabel = 'Count me in',
 }: InterestCounterProps) {
   const [count, setCount] = useState(0)
