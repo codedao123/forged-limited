@@ -72,7 +72,7 @@ export function AttendanceCounter({
         type="button"
         onClick={handlePress}
         disabled={hasPressed || pending}
-        className="border border-border px-7 py-4 font-mono text-xs uppercase tracking-[0.3em] text-foreground transition-colors hover:border-foreground disabled:cursor-not-allowed disabled:opacity-60"
+        className="border border-white bg-white px-7 py-4 font-mono text-xs uppercase tracking-[0.3em] text-black transition-opacity hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {pending ? 'Saving' : hasPressed ? 'Counted' : actionLabel} · {count}
       </button>

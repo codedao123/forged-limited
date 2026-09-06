@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, CalendarDays, MapPin } from 'lucide-react'
 import { AttendanceCounter } from '@/components/attendance-counter'
@@ -25,8 +26,8 @@ export default function EventPage() {
 
         <div className="mt-20 max-w-4xl">
           <Reveal delay={0.1}>
-            <p className="font-mono text-xs uppercase tracking-[0.5em] text-muted-foreground">
-              FORGED.LIMITED / Launch Event
+            <p className="inline-flex bg-primary px-3 py-2 font-mono text-xs uppercase tracking-[0.4em] text-primary-foreground">
+              Product 001 / Launch Event
             </p>
             <h1 className="mt-6 text-balance text-5xl font-medium tracking-tight sm:text-8xl">
               FORGED Car Meet
@@ -38,7 +39,26 @@ export default function EventPage() {
           </Reveal>
         </div>
 
-        <Reveal delay={0.2} className="mt-16 border-y border-border">
+        <Reveal delay={0.2} className="relative mt-16 aspect-[16/8] overflow-hidden border border-border bg-card">
+          <Image
+            src="/editions/0006.png"
+            alt="Lamborghini Gallardo at the FORGED car meet"
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 1200px"
+            className="object-cover"
+          />
+          <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-black/75 px-5 py-4 sm:px-8 sm:py-6">
+            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-white sm:text-xs">
+              Cars / People / Culture
+            </span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-white sm:text-xs">
+              Adelaide
+            </span>
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.3} className="mt-16 border-y border-border">
           <div className="grid sm:grid-cols-2">
             <div className="flex items-start gap-4 border-b border-border py-8 sm:border-b-0 sm:border-r sm:pr-10">
               <CalendarDays className="mt-0.5 h-5 w-5 shrink-0 text-muted-foreground" aria-hidden="true" />
@@ -61,7 +81,7 @@ export default function EventPage() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.3} className="mt-16 max-w-2xl">
+        <Reveal delay={0.4} className="mt-16 max-w-2xl">
           <p className="font-mono text-xs uppercase tracking-[0.4em] text-muted-foreground">
             First release
           </p>
