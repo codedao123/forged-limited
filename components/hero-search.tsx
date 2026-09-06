@@ -1,10 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, CalendarDays, Tag } from 'lucide-react'
 
 export function HeroSearch() {
   const router = useRouter()
@@ -81,20 +82,54 @@ export function HeroSearch() {
         transition={{ duration: 1.1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className="mt-6 grid w-full max-w-md grid-cols-2 gap-3"
       >
-        <Link
+        <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.35 }}>
+          <Link
           href="/merch"
-          className="group inline-flex items-center justify-center gap-2 rounded-md bg-white px-4 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-black transition-transform hover:-translate-y-1"
-        >
-          Merch
-          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
-        </Link>
-        <Link
+          aria-label="Explore Forged JetTags merch"
+          className="group relative block aspect-[1.18] overflow-hidden rounded-md border border-white/20 bg-white text-left text-black shadow-2xl shadow-black/30"
+          >
+            <Image
+              src="/editions/product-001.png"
+              alt=""
+              fill
+              sizes="(max-width: 640px) 50vw, 250px"
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+            <div className="absolute inset-x-3 bottom-3 text-white sm:inset-x-4 sm:bottom-4">
+              <div className="flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.25em] text-white/70">
+                <span className="inline-flex items-center gap-1.5"><Tag className="h-3 w-3" aria-hidden="true" /> 001</span>
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
+              </div>
+              <p className="mt-2 text-sm font-medium tracking-tight">Forged JetTags</p>
+              <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-white/70">Limited release</p>
+            </div>
+          </Link>
+        </motion.div>
+        <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.35, delay: 0.03 }}>
+          <Link
           href="/event"
-          className="group inline-flex items-center justify-center gap-2 rounded-md border border-border bg-card/40 px-4 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-foreground backdrop-blur-md transition-colors hover:border-foreground/50"
-        >
-          Forged Car Meet
-          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
-        </Link>
+          aria-label="Join the Forged Car Meet"
+          className="group relative block aspect-[1.18] overflow-hidden rounded-md border border-white/20 bg-black text-left text-white shadow-2xl shadow-black/30"
+          >
+            <Image
+              src="/editions/0001.png"
+              alt=""
+              fill
+              sizes="(max-width: 640px) 50vw, 250px"
+              className="object-cover opacity-80 grayscale transition-transform duration-700 ease-out group-hover:scale-110 group-hover:grayscale-0"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/10" />
+            <div className="absolute inset-x-3 bottom-3 sm:inset-x-4 sm:bottom-4">
+              <div className="flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.25em] text-white/70">
+                <span className="inline-flex items-center gap-1.5"><CalendarDays className="h-3 w-3" aria-hidden="true" /> Soon</span>
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
+              </div>
+              <p className="mt-2 text-sm font-medium tracking-tight">Forged Car Meet</p>
+              <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-white/70">Register your interest</p>
+            </div>
+          </Link>
+        </motion.div>
       </motion.div>
     </section>
   )
