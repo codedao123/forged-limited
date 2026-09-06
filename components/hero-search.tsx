@@ -118,7 +118,7 @@ export function HeroSearch() {
           >
             <Link
               href="/event"
-              aria-label="Join the Forged Car Meet"
+              aria-label="Join the FORGED Launch Meet"
               className="group relative block aspect-[1.18] overflow-hidden rounded-md border border-white/20 bg-black text-left text-white shadow-2xl shadow-black/30"
             >
             <Image
@@ -131,11 +131,11 @@ export function HeroSearch() {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/10" />
             <div className="absolute inset-x-3 bottom-3 sm:inset-x-4 sm:bottom-4">
               <div className="flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.25em] text-white/70">
-                <span className="inline-flex items-center gap-1.5"><CalendarDays className="h-3 w-3" aria-hidden="true" /> Soon</span>
+                <span className="inline-flex items-center gap-1.5"><CalendarDays className="h-3 w-3" aria-hidden="true" /> 10.10.26</span>
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
               </div>
-              <p className="mt-2 text-sm font-medium tracking-tight">Forged Car Meet</p>
-              <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-white/70">Register your interest</p>
+              <p className="mt-2 text-sm font-medium tracking-tight">FORGED Launch Meet</p>
+              <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-white/70">Count me in</p>
             </div>
             </Link>
           </motion.div>
