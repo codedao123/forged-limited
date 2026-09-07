@@ -122,11 +122,11 @@ export function HeroSearch() {
               className="car-meet-card group relative block aspect-[1.18] overflow-hidden rounded-md border border-white/20 bg-black text-left text-white shadow-2xl shadow-black/30"
             >
             <Image
-              src="/editions/0001.png"
-              alt=""
+              src="/editions/meet.png"
+              alt="FORGED Launch Car Meet poster"
               fill
               sizes="(max-width: 640px) 50vw, 250px"
-              className="object-cover opacity-80 grayscale transition-transform duration-700 ease-out group-hover:scale-110"
+              className="bg-black object-contain p-3 opacity-95 transition-transform duration-700 ease-out group-hover:scale-[1.03] sm:p-4"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/10" />
             <span className="car-meet-callout" aria-hidden="true">CAR MEET</span>
