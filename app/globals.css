@@ -213,7 +213,7 @@
   position: absolute;
   inset: -1px;
   z-index: 1;
-  background: conic-gradient(from 0deg, transparent 0deg 315deg, oklch(1 0 0) 350deg, transparent 360deg);
+  background: conic-gradient(from 0deg, transparent 0deg 340deg, oklch(0.62 0.22 25) 352deg 360deg);
   padding: 1px;
   content: '';
   animation: outline-run 3.5s linear infinite;
