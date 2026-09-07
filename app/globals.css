@@ -181,11 +181,11 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background-color: oklch(0.025 0.01 250);
+  background-color: oklch(0.025 0 0);
   background-image:
-    linear-gradient(125deg, oklch(0.19 0.08 230 / 22%), transparent 38%),
-    radial-gradient(ellipse at 50% -12%, oklch(0.42 0.12 195 / 24%), transparent 48%),
-    radial-gradient(ellipse at 92% 42%, oklch(0.28 0.1 30 / 12%), transparent 36%),
+    linear-gradient(125deg, oklch(0.19 0 0 / 22%), transparent 38%),
+    radial-gradient(ellipse at 50% -12%, oklch(0.42 0 0 / 24%), transparent 48%),
+    radial-gradient(ellipse at 92% 42%, oklch(0.28 0 0 / 12%), transparent 36%),
     linear-gradient(oklch(1 0 0 / 2.5%) 1px, transparent 1px),
     linear-gradient(90deg, oklch(1 0 0 / 2.5%) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 100% 100%, 72px 72px, 72px 72px;
@@ -201,4 +201,50 @@
   content: '';
   opacity: 0.65;
   pointer-events: none;
+}
+
+@keyframes outline-run {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.car-meet-card::before {
+  position: absolute;
+  inset: -1px;
+  z-index: 1;
+  background: conic-gradient(from 0deg, transparent 0deg 315deg, oklch(1 0 0) 350deg, transparent 360deg);
+  padding: 1px;
+  content: '';
+  animation: outline-run 3.5s linear infinite;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.car-meet-card::after {
+  position: absolute;
+  inset: 1px;
+  z-index: 1;
+  border: 1px solid oklch(1 0 0 / 45%);
+  content: '';
+  pointer-events: none;
+}
+
+.car-meet-callout {
+  position: absolute;
+  top: 1.25rem;
+  right: -2.1rem;
+  z-index: 2;
+  width: 9rem;
+  border-block: 1px solid oklch(1 0 0 / 70%);
+  background: oklch(0 0 0 / 72%);
+  padding: 0.35rem 0;
+  text-align: center;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.28em;
+  line-height: 1;
+  color: oklch(1 0 0);
+  transform: rotate(42deg);
 }

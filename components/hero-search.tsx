@@ -119,16 +119,17 @@ export function HeroSearch() {
             <Link
               href="/event"
               aria-label="Join the FORGED Launch Meet"
-              className="group relative block aspect-[1.18] overflow-hidden rounded-md border border-white/20 bg-black text-left text-white shadow-2xl shadow-black/30"
+              className="car-meet-card group relative block aspect-[1.18] overflow-hidden rounded-md border border-white/20 bg-black text-left text-white shadow-2xl shadow-black/30"
             >
             <Image
               src="/editions/0001.png"
               alt=""
               fill
               sizes="(max-width: 640px) 50vw, 250px"
-              className="object-cover opacity-80 grayscale transition-transform duration-700 ease-out group-hover:scale-110 group-hover:grayscale-0"
+              className="object-cover opacity-80 grayscale transition-transform duration-700 ease-out group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/10" />
+            <span className="car-meet-callout" aria-hidden="true">CAR MEET</span>
             <div className="absolute inset-x-3 bottom-3 sm:inset-x-4 sm:bottom-4">
               <div className="flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.25em] text-white/70">
                 <span className="inline-flex items-center gap-1.5"><CalendarDays className="h-3 w-3" aria-hidden="true" /> 10.10.26</span>
