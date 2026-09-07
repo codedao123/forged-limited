@@ -59,12 +59,12 @@ export default function EventPage() {
           </div>
           <Reveal delay={0.2} className="relative min-h-[340px] overflow-hidden border-t border-border lg:border-l lg:border-t-0">
             <Image
-              src="/editions/0001.png"
-              alt="Car from the FORGED archive"
+              src="/editions/meet.png"
+              alt="FORGED Launch Car Meet poster"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover grayscale transition duration-700 hover:scale-105 hover:grayscale-0"
+              className="bg-black object-contain p-4 transition duration-700 hover:scale-[1.02] sm:p-8"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-white/70">
