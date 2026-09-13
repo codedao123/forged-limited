@@ -32,7 +32,7 @@ export function LatestEditions() {
                 className="overflow-hidden rounded-lg border border-border bg-card/60 backdrop-blur-sm"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  {edition.gallery.length > 0 ? (
+                  {edition.gallery.length > 0 || edition.video ? (
                     <Image
                       src={`/editions/${edition.number}.png`}
                       alt={edition.vehicle}

@@ -32,6 +32,16 @@ function Section({
 export function EditionDetail({ edition }: { edition: Edition }) {
   return (
     <main className="min-h-screen bg-background text-foreground">
+      {edition.number === '0013' && (
+        <div className="cherry-blossoms" aria-hidden="true">
+          <span className="cherry-blossom cherry-blossom-1" />
+          <span className="cherry-blossom cherry-blossom-2" />
+          <span className="cherry-blossom cherry-blossom-3" />
+          <span className="cherry-blossom cherry-blossom-4" />
+          <span className="cherry-blossom cherry-blossom-5" />
+          <span className="cherry-blossom cherry-blossom-6" />
+        </div>
+      )}
       <div className="mx-auto w-full max-w-5xl px-6 py-10">
         <motion.div
           initial={{ opacity: 0 }}
@@ -69,14 +79,27 @@ export function EditionDetail({ edition }: { edition: Edition }) {
           delay={0.25}
           className="relative mt-12 aspect-[16/10] overflow-hidden rounded-xl border border-border"
         >
-          <Image
-            src={edition.gallery[0] || `/editions/${edition.number}.png`}
-            alt={edition.vehicle}
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 1024px"
-            className="object-cover"
-          />
+          {edition.video ? (
+            <video
+              src={edition.video}
+              autoPlay
+              controls
+              muted
+              playsInline
+              preload="metadata"
+              poster="/editions/0013.png"
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <Image
+              src={edition.gallery[0] || `/editions/${edition.number}.png`}
+              alt={edition.vehicle}
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              className="object-cover"
+            />
+          )}
         </Section>
 
         {/* Specs */}
@@ -113,29 +136,31 @@ export function EditionDetail({ edition }: { edition: Edition }) {
         </Section>
 
         {/* Gallery */}
-        <Section delay={0.55} className="mt-16">
-          <h2 className="font-mono text-xs uppercase tracking-[0.4em] text-muted-foreground">
-            Gallery
-          </h2>
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {edition.gallery.map((src, i) => (
-              <div
-                key={src}
-                className={`relative overflow-hidden rounded-xl border border-border ${
-                  i === 0 ? 'aspect-[16/10] sm:col-span-2' : 'aspect-[4/3]'
-                }`}
-              >
-                <Image
-                  src={src || '/placeholder.svg'}
-                  alt={`${edition.vehicle} — image ${i + 1}`}
-                  fill
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </Section>
+        {edition.gallery.length > 0 && (
+          <Section delay={0.55} className="mt-16">
+            <h2 className="font-mono text-xs uppercase tracking-[0.4em] text-muted-foreground">
+              Gallery
+            </h2>
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {edition.gallery.map((src, i) => (
+                <div
+                  key={src}
+                  className={`relative overflow-hidden rounded-xl border border-border ${
+                    i === 0 ? 'aspect-[16/10] sm:col-span-2' : 'aspect-[4/3]'
+                  }`}
+                >
+                  <Image
+                    src={src || '/placeholder.svg'}
+                    alt={`${edition.vehicle} — image ${i + 1}`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </Section>
+        )}
 
         {/* Story */}
         <Section delay={0.6}>

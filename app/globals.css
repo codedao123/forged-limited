@@ -177,6 +177,61 @@
   animation: marquee 22s linear infinite;
 }
 
+.cherry-blossoms {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.cherry-blossom {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  opacity: 0.72;
+  background:
+    radial-gradient(circle at 50% 17%, oklch(0.82 0.1 355) 0 29%, transparent 31%),
+    radial-gradient(circle at 83% 42%, oklch(0.82 0.1 355) 0 29%, transparent 31%),
+    radial-gradient(circle at 68% 79%, oklch(0.82 0.1 355) 0 29%, transparent 31%),
+    radial-gradient(circle at 32% 79%, oklch(0.82 0.1 355) 0 29%, transparent 31%),
+    radial-gradient(circle at 17% 42%, oklch(0.82 0.1 355) 0 29%, transparent 31%);
+  filter: drop-shadow(0 0 8px oklch(0.72 0.12 355 / 30%));
+  animation: blossom-fall 12s linear infinite;
+}
+
+.cherry-blossom::after {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: oklch(0.92 0.12 75);
+  content: '';
+}
+
+.cherry-blossom-1 { top: 18%; left: 3%; animation-delay: -2s; }
+.cherry-blossom-2 { top: 42%; left: 7%; animation-delay: -8s; transform: scale(0.7); }
+.cherry-blossom-3 { top: 72%; left: 2%; animation-delay: -5s; transform: scale(0.85); }
+.cherry-blossom-4 { top: 25%; right: 4%; animation-delay: -10s; transform: scale(0.8); }
+.cherry-blossom-5 { top: 56%; right: 7%; animation-delay: -4s; transform: scale(0.65); }
+.cherry-blossom-6 { top: 82%; right: 3%; animation-delay: -7s; transform: scale(0.9); }
+
+@keyframes blossom-fall {
+  0% { translate: 0 -18vh rotate(-8deg); opacity: 0; }
+  12% { opacity: 0.72; }
+  50% { translate: 14px 42vh rotate(12deg); }
+  88% { opacity: 0.72; }
+  100% { translate: -8px 118vh rotate(26deg); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cherry-blossom {
+    animation: none;
+  }
+}
+
 .homepage-background {
   position: relative;
   isolation: isolate;

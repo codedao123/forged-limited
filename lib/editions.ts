@@ -8,6 +8,7 @@ export type Edition = {
   power: string
   modifications: string[]
   gallery: string[]
+  video?: string
   story: string
 }
 
@@ -223,6 +224,56 @@ export const editions: Edition[] = [
     gallery: ['/editions/0012.png', '/editions/0012-a.png', '/editions/0012-b.png'],
     story:
       'Bailey’s MT-07 is a clean, modern street-focused build with a sharp presence and a stripped-back feel that keeps the attention on the essentials.',
+  },
+  {
+    number: '0013',
+    vehicle: 'Toyota 86',
+    ownerInstagram: '@lamkhacnguyen',
+    featuredDate: 'September 2026',
+    location: 'Private',
+    year: '2013',
+    power: '228 hp — 2.4L naturally aspirated boxer-four',
+    modifications: ['Running coilovers', 'Custom exhaust'],
+    gallery: [],
+    video: '/editions/86test.mov',
+    story:
+      'The Toyota 86 is a classic lightweight sports car formula: balanced handling, a naturally aspirated boxer engine, and a simple setup that keeps the focus on the driving experience.',
+  },
+  {
+    number: '0014',
+    vehicle: 'Mitsubishi Lancer',
+    ownerInstagram: 'Unknown',
+    featuredDate: 'September 2026',
+    location: 'Fulham Gardens',
+    year: '2001',
+    power: 'TBC',
+    modifications: [],
+    gallery: [],
+    story:
+      'The Mitsubishi Lancer brings a sharp, rally-inspired character and a compact performance focus that makes it a standout in any archive of modern JDM culture.',
+  },
+  {
+    number: '0015',
+    vehicle: 'Nissan Skyline R33 GT-T Type M 2.5 RB25DET',
+    ownerInstagram: '@fryrice_r33_type_m_',
+    featuredDate: 'September 2026',
+    location: 'Fulham Gardens',
+    year: '1995',
+    power: '2.5L RB25DET inline-six turbocharged, running 10 psi boost',
+    modifications: [
+      'Sparkle Silver finish',
+      'Lowered on coilovers',
+      'USA Forged Drag Pro 18 inch wheels',
+      'HKS exhaust',
+      'Blitz front mount intercooler',
+      'Dose pipe',
+      'Dump pipe',
+      'Screamer pipe',
+      'Yellow jacket coil packs',
+    ],
+    gallery: ['/editions/0015.png', '/editions/0015-a.png', '/editions/0015-b.png', '/editions/0015-c.png', '/editions/0015-d.png'],
+    story:
+      'A birthday deserves something special. Captured in Fulham Gardens, this 1995 Nissan Skyline R33 GT-T Type M is finished in sparkle silver and built around a 2.5L RB25DET setup. Lowered on coilovers, wearing USA Forged Drag Pro 18-inch wheels, and backed by an HKS exhaust, Blitz front-mount intercooler, dose pipe, dump pipe, screamer pipe, and yellow-jacket coil packs, it delivers a clean, purposeful JDM stance with a tuned 10 psi boost setup. A personal milestone, marked by an unmistakable R33.',
   },
 ]
 
