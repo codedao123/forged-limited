@@ -77,7 +77,9 @@ export function EditionDetail({ edition }: { edition: Edition }) {
 
         <Section
           delay={0.25}
-          className="relative mt-12 aspect-[16/10] overflow-hidden rounded-xl border border-border"
+          className={`relative mx-auto mt-12 overflow-hidden rounded-xl border border-border ${
+            edition.video ? 'aspect-[9/16] max-w-md bg-black' : 'aspect-[16/10] w-full'
+          }`}
         >
           {edition.video ? (
             <video
@@ -88,7 +90,7 @@ export function EditionDetail({ edition }: { edition: Edition }) {
               playsInline
               preload="metadata"
               poster="/editions/0013.png"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
             />
           ) : (
             <Image
