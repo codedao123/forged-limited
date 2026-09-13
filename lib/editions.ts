@@ -234,7 +234,7 @@ export const editions: Edition[] = [
     year: '2013',
     power: '197 hp — 2.0L naturally aspirated boxer-four',
     modifications: ['Lowered on HSD coilovers', 'Custom exhaust'],
-    gallery: [],
+    gallery: ['/editions/0013.png', '/editions/0013-a.png', '/editions/0013-b.png', '/editions/0013-c.png'],
     video: '/editions/86test.mov',
     story:
       'The Toyota 86 is a classic lightweight sports car formula: balanced handling, a naturally aspirated boxer engine, and a simple setup that keeps the focus on the driving experience.',
