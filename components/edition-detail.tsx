@@ -156,7 +156,11 @@ export function EditionDetail({ edition }: { edition: Edition }) {
                     alt={`${edition.vehicle} — image ${i + 1}`}
                     fill
                     sizes="(max-width: 640px) 100vw, 50vw"
-                    className="object-cover"
+                    className={`object-cover ${
+                      src.endsWith('-a.png') || src.endsWith('-c.png')
+                        ? 'object-[center_72%]'
+                        : ''
+                    }`}
                   />
                 </div>
               ))}
