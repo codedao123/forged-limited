@@ -233,7 +233,7 @@ export const editions: Edition[] = [
     location: 'Private',
     year: '2013',
     power: '197 hp — 2.0L naturally aspirated boxer-four',
-    modifications: ['Running coilovers', 'Custom exhaust'],
+    modifications: ['Lowered on HSD coilovers', 'Custom exhaust'],
     gallery: [],
     video: '/editions/86test.mov',
     story:
