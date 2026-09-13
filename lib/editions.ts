@@ -232,7 +232,7 @@ export const editions: Edition[] = [
     featuredDate: 'September 2026',
     location: 'Private',
     year: '2013',
-    power: '228 hp — 2.4L naturally aspirated boxer-four',
+    power: '197 hp — 2.0L naturally aspirated boxer-four',
     modifications: ['Running coilovers', 'Custom exhaust'],
     gallery: [],
     video: '/editions/86test.mov',
