@@ -40,6 +40,10 @@ export default function MerchPage() {
               The first product from FORGED.LIMITED. A limited-release identity tag for the people,
               places, and machines that keep moving.
             </p>
+            <p className="mt-6 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.25em] text-white">
+              <span className="h-2 w-2 bg-white" aria-hidden="true" />
+              In stock / Interest list open
+            </p>
 
             <dl className="mt-12 grid grid-cols-2 gap-y-8 border-y border-border py-8">
               <div>
@@ -50,24 +54,24 @@ export default function MerchPage() {
               </div>
               <div>
                 <dt className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
-                  Product
+                  Edition
                 </dt>
-                <dd className="mt-2 text-sm tracking-wide">200 units</dd>
+                <dd className="mt-2 text-sm tracking-wide">Limited to 200 pieces</dd>
               </div>
             </dl>
 
             <div className="mt-10 flex flex-col items-start gap-6 sm:flex-row sm:items-start">
+              <AttendanceCounter
+                storageKey="forged-jettags-interest-reset-2026-09-07"
+                actionLabel="I want a JetTag"
+              />
               <Link
                 href="/event"
-                className="inline-flex items-center gap-3 bg-primary px-7 py-4 font-mono text-xs uppercase tracking-[0.3em] text-primary-foreground transition-opacity hover:opacity-80"
+                className="inline-flex items-center gap-3 border border-border px-7 py-4 font-mono text-xs uppercase tracking-[0.3em] transition-colors hover:border-foreground"
               >
                 Attend the event
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
-              <AttendanceCounter
-                storageKey="forged-jettags-interest-reset-2026-09-07"
-                actionLabel="I want one"
-              />
             </div>
           </Reveal>
         </div>

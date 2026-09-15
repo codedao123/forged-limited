@@ -46,6 +46,9 @@ export default function EventPage() {
                 FORGED Launch Meet <span className="text-white">×</span> Slow Car Society SA.
                 The launch meet for cars, culture, and the people behind it.
               </p>
+              <div className="mt-8">
+                <AttendanceCounter />
+              </div>
             </Reveal>
             <Reveal delay={0.25}>
               <div className="mt-12 flex items-end justify-between border-t border-border pt-5">
@@ -109,36 +112,27 @@ export default function EventPage() {
           </div>
         </section>
 
-        <Reveal delay={0.2} className="mt-24 border border-white/20 bg-black p-7 sm:p-10">
-          <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div>
-              <p className="font-mono text-xs uppercase tracking-[0.35em] text-white/60">Join the roll call</p>
-              <h2 className="mt-4 text-3xl font-bold uppercase tracking-[-0.05em] sm:text-5xl">Are you pulling up?</h2>
-              <p className="mt-4 max-w-lg leading-7 text-muted-foreground">Tap once so we know how many cars to make room for. Keep up with updates on both pages.</p>
-            </div>
-            <AttendanceCounter />
-          </div>
-          <div className="mt-10 flex flex-col gap-3 border-t border-border pt-6 sm:flex-row">
-            <a
-              href="https://www.instagram.com/slowcarsociety_sa/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 border border-border px-5 py-4 font-mono text-xs uppercase tracking-[0.2em] transition-colors hover:border-foreground"
-            >
-              @slowcarsociety_sa
-              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-            </a>
-            <a
-              href="https://www.instagram.com/forged.limited/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 border border-border px-5 py-4 font-mono text-xs uppercase tracking-[0.2em] transition-colors hover:border-foreground"
-            >
-              @forged.limited
-              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-            </a>
-          </div>
+        <Reveal delay={0.2} className="mt-24 flex flex-col gap-3 border-t border-border pt-6 sm:flex-row">
+          <a
+            href="https://www.instagram.com/slowcarsociety_sa/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 border border-border px-5 py-4 font-mono text-xs uppercase tracking-[0.2em] transition-colors hover:border-foreground"
+          >
+            @slowcarsociety_sa
+            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+          </a>
+          <a
+            href="https://www.instagram.com/forged.limited/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 border border-border px-5 py-4 font-mono text-xs uppercase tracking-[0.2em] transition-colors hover:border-foreground"
+          >
+            @forged.limited
+            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+          </a>
         </Reveal>
+
       </div>
     </main>
   )
