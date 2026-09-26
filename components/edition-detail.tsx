@@ -30,6 +30,8 @@ function Section({
 }
 
 export function EditionDetail({ edition }: { edition: Edition }) {
+  const isMintLancer = edition.number === '0014'
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       {edition.number === '0013' && (
@@ -61,7 +63,7 @@ export function EditionDetail({ edition }: { edition: Edition }) {
       <div className="mx-auto w-full max-w-5xl px-6 pb-28">
         {/* Hero */}
         <Section>
-          <p className="font-mono text-xs uppercase tracking-[0.5em] text-muted-foreground">
+          <p className={`font-mono text-xs uppercase tracking-[0.5em] ${isMintLancer ? 'text-[#39d6c0]' : 'text-muted-foreground'}`}>
             Edition №{edition.number}
           </p>
         </Section>
@@ -70,14 +72,30 @@ export function EditionDetail({ edition }: { edition: Edition }) {
           <h1 className="mt-6 text-balance text-3xl font-medium tracking-tight sm:text-5xl">
             {edition.vehicle}
           </h1>
-          <p className="mt-4 font-mono text-sm tracking-wide text-muted-foreground">
-            {edition.ownerInstagram}
-          </p>
+          {isMintLancer ? (
+            <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-xs uppercase tracking-[0.18em]">
+              <span className="h-3 w-3 rounded-full bg-[#39d6c0] ring-4 ring-[#39d6c0]/15" aria-hidden="true" />
+              <span className="text-muted-foreground">Porsche Mint Green</span>
+              <span className="text-border" aria-hidden="true">/</span>
+              <a
+                href={`https://www.instagram.com/${edition.ownerInstagram.replace('@', '')}/`}
+                target="_blank"
+                rel="noreferrer"
+                className="text-[#39d6c0] transition-opacity hover:opacity-75"
+              >
+                {edition.ownerInstagram}
+              </a>
+            </div>
+          ) : (
+            <p className="mt-4 font-mono text-sm tracking-wide text-muted-foreground">
+              {edition.ownerInstagram}
+            </p>
+          )}
         </Section>
 
         <Section
           delay={0.25}
-          className={`relative mx-auto mt-12 overflow-hidden rounded-xl border border-border ${
+          className={`relative mx-auto mt-12 overflow-hidden rounded-xl border ${isMintLancer ? 'border-[#39d6c0]/50 shadow-[0_0_36px_rgba(57,214,192,0.12)]' : 'border-border'} ${
             edition.video ? 'aspect-[9/16] max-w-md bg-black' : 'aspect-[16/10] w-full'
           }`}
         >
@@ -107,28 +125,28 @@ export function EditionDetail({ edition }: { edition: Edition }) {
         {/* Specs */}
         <Section
           delay={0.4}
-          className="mt-14 grid grid-cols-2 gap-x-6 gap-y-10 border-y border-border py-10 sm:grid-cols-4"
+          className={`mt-14 grid grid-cols-2 gap-x-6 gap-y-10 border-y py-10 sm:grid-cols-4 ${isMintLancer ? 'border-[#39d6c0]/35' : 'border-border'}`}
         >
-          <Detail label="Vehicle" value={edition.vehicle} />
-          <Detail label="Year" value={edition.year} />
-          <Detail label="Power" value={edition.power} />
-          <Detail label="Location" value={edition.location} />
-          <Detail label="Owner" value={edition.ownerInstagram} />
-          <Detail label="Date Featured" value={edition.featuredDate} />
+          <Detail label="Vehicle" value={edition.vehicle} accent={isMintLancer} />
+          <Detail label="Year" value={edition.year} accent={isMintLancer} />
+          <Detail label="Power" value={edition.power} accent={isMintLancer} />
+          <Detail label="Location" value={edition.location} accent={isMintLancer} />
+          <Detail label="Owner" value={edition.ownerInstagram} accent={isMintLancer} />
+          <Detail label="Date Featured" value={edition.featuredDate} accent={isMintLancer} />
         </Section>
 
         {/* Modifications */}
         <Section delay={0.5} className="mt-16">
-          <h2 className="font-mono text-xs uppercase tracking-[0.4em] text-muted-foreground">
+          <h2 className={`font-mono text-xs uppercase tracking-[0.4em] ${isMintLancer ? 'text-[#39d6c0]' : 'text-muted-foreground'}`}>
             Modifications
           </h2>
-          <ul className="mt-8 divide-y divide-border border-y border-border">
+          <ul className={`mt-8 divide-y border-y ${isMintLancer ? 'divide-[#39d6c0]/20 border-[#39d6c0]/35' : 'divide-border border-border'}`}>
             {edition.modifications.map((mod, i) => (
               <li
                 key={mod}
                 className="flex items-baseline gap-6 py-5 text-base tracking-wide sm:text-lg"
               >
-                <span className="font-mono text-xs text-muted-foreground">
+                <span className={`font-mono text-xs ${isMintLancer ? 'text-[#39d6c0]' : 'text-muted-foreground'}`}>
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <span className="text-pretty">{mod}</span>
@@ -140,14 +158,14 @@ export function EditionDetail({ edition }: { edition: Edition }) {
         {/* Gallery */}
         {edition.gallery.length > 0 && (
           <Section delay={0.55} className="mt-16">
-            <h2 className="font-mono text-xs uppercase tracking-[0.4em] text-muted-foreground">
+            <h2 className={`font-mono text-xs uppercase tracking-[0.4em] ${isMintLancer ? 'text-[#39d6c0]' : 'text-muted-foreground'}`}>
               Gallery
             </h2>
             <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {edition.gallery.map((src, i) => (
                 <div
                   key={src}
-                  className={`relative overflow-hidden rounded-xl border border-border ${
+                  className={`relative overflow-hidden rounded-xl border ${isMintLancer ? 'border-[#39d6c0]/35' : 'border-border'} ${
                     i === 0 ? 'aspect-[16/10] sm:col-span-2' : 'aspect-[4/3]'
                   }`}
                 >
@@ -170,7 +188,7 @@ export function EditionDetail({ edition }: { edition: Edition }) {
 
         {/* Story */}
         <Section delay={0.6}>
-          <p className="mt-16 max-w-3xl text-pretty text-xl font-light leading-relaxed tracking-tight text-muted-foreground sm:text-2xl sm:leading-relaxed">
+          <p className={`mt-16 max-w-3xl border-l-2 pl-6 text-pretty text-xl font-light leading-relaxed tracking-tight text-muted-foreground sm:text-2xl sm:leading-relaxed ${isMintLancer ? 'border-[#39d6c0]' : 'border-transparent pl-0'}`}>
             {edition.story}
           </p>
         </Section>
@@ -179,7 +197,7 @@ export function EditionDetail({ edition }: { edition: Edition }) {
         <Section delay={0.65} className="mt-20">
           <Link
             href="/"
-            className="group flex w-full items-center justify-center gap-4 rounded-xl bg-primary px-8 py-8 font-mono text-xs uppercase tracking-[0.4em] text-primary-foreground transition-opacity hover:opacity-90"
+            className={`group flex w-full items-center justify-center gap-4 rounded-xl px-8 py-8 font-mono text-xs uppercase tracking-[0.4em] transition-opacity hover:opacity-90 ${isMintLancer ? 'bg-[#39d6c0] text-black' : 'bg-primary text-primary-foreground'}`}
           >
             <ArrowLeft
               className="h-4 w-4 transition-transform group-hover:-translate-x-1"
@@ -193,10 +211,10 @@ export function EditionDetail({ edition }: { edition: Edition }) {
   )
 }
 
-function Detail({ label, value }: { label: string; value: string }) {
+function Detail({ label, value, accent = false }: { label: string; value: string; accent?: boolean }) {
   return (
     <div>
-      <dt className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
+      <dt className={`font-mono text-[11px] uppercase tracking-[0.25em] ${accent ? 'text-[#39d6c0]' : 'text-muted-foreground'}`}>
         {label}
       </dt>
       <dd className="mt-3 text-sm tracking-wide sm:text-base">{value}</dd>
