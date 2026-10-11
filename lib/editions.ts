@@ -306,14 +306,14 @@ export const editions: Edition[] = [
   },
   {
     number: '0019',
-    vehicle: 'DAYZ Nissan Stagea C34 RS4V Series 2 Snowpack Edition',
+    vehicle: 'DAYZ Nissan Stagea C34 RS4V Series 2 Snowpark Edition',
     ownerInstagram: '@mzdotti',
     featuredDate: 'October 2026',
     location: 'Castle Plaza',
     year: '2000',
     power: 'RB25DET NEO turbo inline-six — Tiptronic automatic',
     modifications: [
-      'Dayz Snowpack Edition body kit with front and rear bars and rear wing',
+      'Dayz Snowpark Edition body kit with front and rear bars and rear wing',
       'Full Bayside Blue respray',
       'Carbon-fibre C- and D-pillars',
       'Carbon-fibre interior pieces',
@@ -331,7 +331,7 @@ export const editions: Edition[] = [
     ],
     gallery: ['/editions/0019.png', '/editions/0019-a.png', '/editions/0019-b.png', '/editions/0019-c.png', '/editions/0019-d.png'],
     story:
-      'This 2000 Series 2 Nissan Stagea C34 RS4V Snowpack Edition pairs Bayside Blue paint with a Tiptronic transmission and RB25DET NEO. Its Dayz body kit, carbon-fibre trim, larger turbo, front-mount intercooler, and R34 GTR wheels complete the build.',
+      'This 2000 Series 2 Nissan Stagea C34 RS4V Snowpark Edition pairs Bayside Blue paint with a Tiptronic transmission and RB25DET NEO. Its Dayz body kit, carbon-fibre trim, larger turbo, front-mount intercooler, and R34 GTR wheels complete the build.',
   },
 ]
 
