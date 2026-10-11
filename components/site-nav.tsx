@@ -87,10 +87,10 @@ export function SiteNav() {
       <div className="overflow-hidden border-t border-border py-2" aria-label="Launch announcements">
         <div className="flex w-max animate-marquee gap-10 font-mono text-[10px] uppercase tracking-[0.35em] text-muted-foreground">
           <span aria-hidden="true">
-            JET TAGS IN STOCK · FORGED CAR MEET · COUNT ME IN ·
+            JET TAGS IN STOCK ·
           </span>
           <span aria-hidden="true">
-            JET TAGS IN STOCK · FORGED CAR MEET · COUNT ME IN ·
+            JET TAGS IN STOCK ·
           </span>
         </div>
       </div>

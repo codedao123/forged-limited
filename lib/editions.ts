@@ -285,6 +285,54 @@ export const editions: Edition[] = [
     story:
       'A birthday deserves something special. Captured in Fulham Gardens, this 1995 Nissan Skyline R33 GT-T Type M is finished in sparkle silver and built around a 2.5L RB25DET setup. Lowered on coilovers, wearing USA Forged Drag Pro 18-inch wheels, and backed by an HKS exhaust, Blitz front-mount intercooler, dose pipe, dump pipe, screamer pipe, and yellow-jacket coil packs, it delivers a clean, purposeful JDM stance with a tuned 10 psi boost setup. A personal milestone, marked by an unmistakable R33.',
   },
+  {
+    number: '0018',
+    vehicle: 'Holden Commodore VS Executive Series II',
+    ownerInstagram: '@t1dy_vs.97',
+    featuredDate: 'TBC',
+    location: 'Castle Plaza',
+    year: '1997',
+    power: '152 kW / 304 Nm — 4-speed automatic',
+    modifications: [
+      'Lowered on custom Pedders suspension',
+      'Custom 2.5-inch exhaust with high-flow catalytic converter and race muffler',
+      'Updated wheels',
+      'Updated brakes',
+      'Ratchet shifter',
+    ],
+    gallery: ['/editions/0018.png', '/editions/0018-a.png', '/editions/0018-b.png'],
+    story:
+      'This 1997 VS Executive delivers 152 kW and 304 Nm through a four-speed automatic with a ratchet shifter. It sits on custom Pedders suspension and features updated wheels and brakes, plus a 2.5-inch exhaust with a high-flow cat and race muffler.',
+  },
+  {
+    number: '0019',
+    vehicle: 'Nissan Stagea C34 RS4V Series 2 Snowpack Edition',
+    ownerInstagram: '@mzdotti',
+    featuredDate: 'TBC',
+    location: 'Castle Plaza',
+    year: '2000',
+    power: 'RB25DET NEO turbo inline-six — Tiptronic automatic',
+    modifications: [
+      'Dayz Snowpack Edition body kit with front and rear bars and rear wing',
+      'Full Bayside Blue respray',
+      'Carbon-fibre C- and D-pillars',
+      'Carbon-fibre interior pieces',
+      'Larger turbo and front-mount intercooler',
+      'Modified engine with blue SplitFire coil packs',
+      '3-inch turbo-back stainless-steel exhaust',
+      'G-TEK fan',
+      'BC Racing street coilovers',
+      'R34 GTR rims',
+      'Ganador mirrors',
+      'Nismo indicators',
+      'Pioneer DVD player with twin subwoofers',
+      'Factory rare Momo steering wheel and Momo floor mats',
+      'Roof-mounted pod gauges beneath the rear-view mirror',
+    ],
+    gallery: ['/editions/0019.png', '/editions/0019-a.png', '/editions/0019-b.png', '/editions/0019-c.png', '/editions/0019-d.png'],
+    story:
+      'This 2000 Series 2 Nissan Stagea C34 RS4V Snowpack Edition pairs Bayside Blue paint with a Tiptronic transmission and RB25DET NEO. Its Dayz body kit, carbon-fibre trim, larger turbo, front-mount intercooler, and R34 GTR wheels complete the build.',
+  },
 ]
 
 export function getEdition(number: string): Edition | undefined {
