@@ -306,7 +306,7 @@ export const editions: Edition[] = [
   },
   {
     number: '0019',
-    vehicle: 'Nissan Stagea C34 RS4V Series 2 Snowpack Edition',
+    vehicle: 'DAYZ Nissan Stagea C34 RS4V Series 2 Snowpack Edition',
     ownerInstagram: '@mzdotti',
     featuredDate: 'October 2026',
     location: 'Castle Plaza',
