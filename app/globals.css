@@ -266,7 +266,7 @@
   right: 4%;
   z-index: -1;
   color: oklch(0.72 0.16 55 / 38%);
-  content: '🦇   🦇\A      🦇';
+  content: '\1F987  \1F987\A      \1F987';
   white-space: pre;
   font-size: clamp(14px, 2vw, 28px);
   line-height: 1.7;
