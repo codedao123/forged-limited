@@ -8,7 +8,7 @@ const links = [
   { label: 'Archive', href: '/#editions' },
   { label: 'Wallpapers', href: '/wallpapers' },
   { label: 'Merch', href: '/merch' },
-  { label: 'Event', href: '/event' },
+  { label: 'Family Car Meet', href: '/event' },
   { label: 'About', href: '/#about' },
   {
     label: 'Instagram',

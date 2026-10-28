@@ -107,7 +107,7 @@ export function EditionDetail({ edition }: { edition: Edition }) {
               muted
               playsInline
               preload="metadata"
-              poster="/editions/0013.png"
+              poster={edition.gallery[0] || `/editions/${edition.number}.png`}
               className="h-full w-full object-contain"
             />
           ) : (
@@ -121,6 +121,24 @@ export function EditionDetail({ edition }: { edition: Edition }) {
             />
           )}
         </Section>
+
+        {edition.videos && edition.videos.length > 0 && (
+          <Section delay={0.32} className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {edition.videos.map((src, index) => (
+              <div key={src} className="overflow-hidden rounded-xl border border-border bg-black">
+                <video
+                  src={src}
+                  controls
+                  muted
+                  playsInline
+                  preload="metadata"
+                  poster={edition.gallery[index + 1] || edition.gallery[0]}
+                  className="aspect-[9/16] w-full object-contain sm:max-h-[520px]"
+                />
+              </div>
+            ))}
+          </Section>
+        )}
 
         {/* Specs */}
         <Section

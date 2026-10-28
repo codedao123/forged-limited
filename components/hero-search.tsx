@@ -118,21 +118,27 @@ export function HeroSearch() {
           >
             <Link
               href="/event"
-              aria-label="Read the event announcement"
-              className="group flex aspect-[1.18] flex-col justify-between overflow-hidden rounded-md border border-white/20 bg-card p-4 text-left text-foreground shadow-2xl shadow-black/30 transition-colors hover:border-white/50 sm:p-5"
+              aria-label="View the Family Car Meet"
+              className="group relative block aspect-[1.18] overflow-hidden rounded-md border border-white/20 bg-card text-left text-foreground shadow-2xl shadow-black/30 transition-colors hover:border-white/50"
             >
-              <div className="flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
+              <Image
+                src="/editions/carmeet.png"
+                alt="Family Car Meet"
+                fill
+                sizes="(max-width: 640px) 50vw, 250px"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10" />
+              <div className="absolute inset-x-3 top-3 flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.2em] text-white/80 sm:inset-x-4 sm:top-4">
                 <span className="inline-flex items-center gap-2">
                   <Megaphone className="h-3.5 w-3.5" aria-hidden="true" />
-                  Event announcement
+                  Family Car Meet
                 </span>
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
               </div>
-              <div>
-                <p className="text-sm font-medium tracking-tight">To Be Announced</p>
-                <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
-                  Read the announcement
-                </p>
+              <div className="absolute inset-x-3 bottom-3 text-white sm:inset-x-4 sm:bottom-4">
+                <p className="text-sm font-medium tracking-tight">7 November</p>
+                <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-white/70">View event details</p>
               </div>
             </Link>
           </motion.div>

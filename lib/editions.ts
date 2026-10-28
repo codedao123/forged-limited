@@ -9,6 +9,7 @@ export type Edition = {
   modifications: string[]
   gallery: string[]
   video?: string
+  videos?: string[]
   story: string
 }
 
@@ -286,6 +287,34 @@ export const editions: Edition[] = [
       'A birthday deserves something special. Captured in Fulham Gardens, this 1995 Nissan Skyline R33 GT-T Type M is finished in sparkle silver and built around a 2.5L RB25DET setup. Lowered on coilovers, wearing USA Forged Drag Pro 18-inch wheels, and backed by an HKS exhaust, Blitz front-mount intercooler, dose pipe, dump pipe, screamer pipe, and yellow-jacket coil packs, it delivers a clean, purposeful JDM stance with a tuned 10 psi boost setup. A personal milestone, marked by an unmistakable R33.',
   },
   {
+    number: '0016',
+    vehicle: 'Lamborghini Gallardo',
+    ownerInstagram: 'Unknown',
+    featuredDate: 'October 2026',
+    location: 'Castle Plaza',
+    year: 'TBC',
+    power: 'TBC',
+    modifications: [],
+    gallery: [],
+    story:
+      'The Lamborghini Gallardo is an iconic Italian supercar known for its dramatic design, V10 soundtrack, and unmistakable exotic presence.',
+  },
+  {
+    number: '0017',
+    vehicle: 'Lotus Exige S',
+    ownerInstagram: '@carmeets.au',
+    featuredDate: 'October 2026',
+    location: 'Castle Plaza',
+    year: 'TBC',
+    power: 'TBC',
+    modifications: [],
+    gallery: ['/editions/0017.png', '/editions/0017-a.png'],
+    video: '/editions/lotus (1).mov',
+    videos: ['/editions/lotus (2).mov', '/editions/lotus (3).mov'],
+    story:
+      'The Lotus Exige S is a focused, lightweight sports car with an unmistakable Lotus character, combining sharp proportions with an immersive driving experience.',
+  },
+  {
     number: '0018',
     vehicle: 'Holden Commodore VS Executive Series II',
     ownerInstagram: '@t1dy_vs.97',
@@ -332,6 +361,33 @@ export const editions: Edition[] = [
     gallery: ['/editions/0019.png', '/editions/0019-a.png', '/editions/0019-b.png', '/editions/0019-c.png', '/editions/0019-d.png'],
     story:
       'This 2000 Series 2 Nissan Stagea C34 RS4V Snowpack Edition pairs Bayside Blue paint with a Tiptronic transmission and RB25DET NEO. Its Dayz body kit, carbon-fibre trim, larger turbo, front-mount intercooler, and R34 GTR wheels complete the build.',
+  },
+  {
+    number: '0020',
+    vehicle: 'Hyundai i30N',
+    ownerInstagram: '@RND_I30N',
+    featuredDate: 'October 2026',
+    location: 'Deadend launch meet',
+    year: 'TBC',
+    power: '231 kW',
+    modifications: [
+      'Graphics courtesy of Clubhouse Work, installed by Dizzy Decals',
+      'X-Titanium V6 wing',
+      'Adro body kit',
+      'Injen air intake',
+      'Uni Chip',
+      'Forge short shifter with Likewise shift knob',
+      'HKS blow-off valve',
+      'Hardtune underglow',
+      'Illumo DRLs',
+      'X-Titanium badge delete',
+      'Rotec bonnet vents',
+    ],
+    gallery: ['/editions/0020.png', '/editions/0020-a.png', '/editions/0020-b.png', '/editions/0020-c.png'],
+    video: '/editions/i30n (1).mov',
+    videos: ['/editions/i30n (2).mov', '/editions/i30n (3).mov'],
+    story:
+      'This Hyundai i30N combines an aggressive Adro body kit, X-Titanium aero details, and Hardtune underglow with a focused performance setup. Clubhouse Work graphics installed by Dizzy Decals complete a distinctive build with sharp track-inspired character.',
   },
 ]
 

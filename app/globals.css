@@ -236,14 +236,15 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background-color: oklch(0.025 0 0);
+  background-color: oklch(0.018 0.018 55);
   background-image:
-    linear-gradient(125deg, oklch(0.19 0 0 / 22%), transparent 38%),
-    radial-gradient(ellipse at 50% -12%, oklch(0.42 0 0 / 24%), transparent 48%),
-    radial-gradient(ellipse at 92% 42%, oklch(0.28 0 0 / 12%), transparent 36%),
-    linear-gradient(oklch(1 0 0 / 2.5%) 1px, transparent 1px),
-    linear-gradient(90deg, oklch(1 0 0 / 2.5%) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 72px 72px, 72px 72px;
+    radial-gradient(ellipse at 50% -12%, oklch(0.58 0.22 45 / 30%), transparent 44%),
+    radial-gradient(ellipse at 92% 35%, oklch(0.38 0.16 300 / 16%), transparent 32%),
+    radial-gradient(ellipse at 8% 72%, oklch(0.48 0.19 35 / 13%), transparent 34%),
+    linear-gradient(125deg, oklch(0.22 0.08 45 / 18%), transparent 42%),
+    linear-gradient(oklch(0.72 0.16 55 / 5%) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.72 0.16 55 / 5%) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 72px 72px, 72px 72px;
 }
 
 .homepage-background::before {
@@ -251,9 +252,38 @@
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, transparent 0%, oklch(1 0 0 / 3%) 50%, transparent 100%),
-    repeating-linear-gradient(115deg, transparent 0 180px, oklch(1 0 0 / 1.5%) 181px, transparent 182px);
+    radial-gradient(circle at 0 0, transparent 0 95px, oklch(0.72 0.08 55 / 10%) 96px 97px, transparent 98px 145px, oklch(0.72 0.08 55 / 7%) 146px 147px, transparent 148px),
+    radial-gradient(circle at 100% 0, transparent 0 95px, oklch(0.72 0.08 55 / 10%) 96px 97px, transparent 98px 145px, oklch(0.72 0.08 55 / 7%) 146px 147px, transparent 148px),
+    repeating-linear-gradient(115deg, transparent 0 180px, oklch(0.72 0.16 55 / 4%) 181px, transparent 182px);
   content: '';
-  opacity: 0.65;
+  opacity: 0.85;
   pointer-events: none;
+}
+
+.homepage-background::after {
+  position: absolute;
+  top: 14%;
+  right: 4%;
+  z-index: -1;
+  color: oklch(0.72 0.16 55 / 38%);
+  content: '🦇   🦇\A      🦇';
+  white-space: pre;
+  font-size: clamp(14px, 2vw, 28px);
+  line-height: 1.7;
+  letter-spacing: 0.8em;
+  transform: rotate(-8deg);
+  filter: drop-shadow(0 8px 12px oklch(0 0 0 / 70%));
+  animation: halloween-bats 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes halloween-bats {
+  0%, 100% { transform: translate(0, 0) rotate(-8deg); opacity: 0.38; }
+  50% { transform: translate(-18px, 12px) rotate(-4deg); opacity: 0.7; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage-background::after {
+    animation: none;
+  }
 }
